@@ -1,7 +1,7 @@
 name: Static site quality gate
 on:
   push:
-    branches: [main, feature/launch-readiness-final]
+    branches: [main, 'feature/**']
   pull_request:
     branches: [main]
 permissions:
