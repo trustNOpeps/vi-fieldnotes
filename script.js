@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded',()=>{const menu=document.querySelec
     writeConsent(choice);
     hideBanner();
     if (choice === 'accepted') enableAnalytics();
+    else if (window.__viAnalyticsEnabled) window.location.reload();
   }
   function showBanner(){
     if (document.getElementById('vi-consent')) return;
@@ -48,3 +49,36 @@ document.addEventListener('DOMContentLoaded',()=>{const menu=document.querySelec
     else showBanner();
   };
 })();
+
+/* VI Fieldnotes utilities and post-launch editorial freshness notices. */
+document.addEventListener('DOMContentLoaded', function(){
+  const nav=document.getElementById('navlinks');
+  if(nav && !nav.querySelector('a[href="/vi-fieldnotes/tools/"]')){
+    const a=document.createElement('a');a.href='/vi-fieldnotes/tools/';a.textContent='Tools';
+    const cta=nav.querySelector('.navcta'); if(cta)nav.insertBefore(a,cta);else nav.appendChild(a);
+  }
+  const input=document.getElementById('vi-storage-value');
+  const check=document.getElementById('vi-storage-check');
+  const result=document.getElementById('vi-storage-result');
+  function calculate(){
+    if(!input || !result)return;
+    const raw=input.value.trim(), n=Number(raw), target=212;
+    if(!raw || !Number.isFinite(n) || n<0 || n>100000){
+      result.textContent='Enter a valid available-space number between 0 and 100,000 GB.';return;
+    }
+    const num=new Intl.NumberFormat('en-US',{maximumFractionDigits:1});
+    if(n>=target){
+      result.textContent='Your entered free space ('+num.format(n)+' GB) meets the current 212 GB PlayStation Indonesia preparation advisory. Margin: '+num.format(n-target)+' GB. Actual installation and updates may differ; verify on your console.';
+    }else{
+      result.textContent='Based on your entry ('+num.format(n)+' GB), you need at least '+num.format(target-n)+' GB more to meet PlayStation Indonesia’s current 212 GB preparation guidance. Review Settings → Storage before deleting or buying anything.';
+    }
+  }
+  check?.addEventListener('click',calculate);
+  input?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();calculate();}});
+  const now=new Date();
+  if((now.getFullYear()>2026 || (now.getFullYear()===2026 && (now.getMonth()>10 || (now.getMonth()===10 && now.getDate()>=19)))) && !document.getElementById('vi-date-advisory')){
+    const notice=document.createElement('div');notice.className='vi-date-advisory';notice.id='vi-date-advisory';
+    notice.innerHTML='<div class="wrap"><strong>Publication note:</strong> These guides were fact-checked before the scheduled 19 November 2026 launch. New game details may have changed. Verify current information at <a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Rockstar’s official website ↗</a>.</div>';
+    const main=document.querySelector('main'); if(main)main.insertAdjacentElement('afterbegin',notice);
+  }
+});

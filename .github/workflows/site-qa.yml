@@ -1,0 +1,22 @@
+name: Static site quality gate
+on:
+  push:
+    branches: [main, feature/launch-readiness-final]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify HTML, sitemap, source policy and links
+        run: python3 tests/check_site.py
+      - name: Validate JavaScript syntax
+        run: node --check script.js
