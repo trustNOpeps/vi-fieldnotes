@@ -14,3 +14,18 @@
 .vi-consent-actions button[data-choice="accepted"]{background:#18233f;color:white}
 .vi-consent-actions button:focus-visible{outline:3px solid #8d6bfa;outline-offset:3px}
 @media(max-width:680px){#vi-consent{bottom:10px;left:10px;right:10px;display:block;padding:16px}.vi-consent-actions{margin-top:14px}.vi-consent-actions button{flex:1}}
+
+/* Launch resource tool and updated guide sections */
+.tool-panel{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:stretch;margin:14px 0 38px}
+.tool-panel>div{padding:34px;border:1px solid var(--border);border-radius:20px;background:#fff}
+.tool-panel h2{font:700 clamp(26px,4vw,38px) 'Space Grotesk',sans-serif;letter-spacing:-1.1px;margin:14px 0}
+.tool-panel p{line-height:1.7}
+.tool-panel label{display:block;font-weight:700;margin:18px 0 8px;font-size:14px}
+.tool-input{display:flex;gap:12px;align-items:center}
+.tool-input input{border:1px solid #a9b0c1;border-radius:12px;padding:14px;width:100%;min-width:0;max-width:220px;background:#fff;color:#172036}
+.tool-panel .muted{color:#5e6779;font-size:13px}
+.tool-result{display:flex;flex-direction:column;justify-content:center;gap:16px;background:var(--mint)!important}
+.tool-result p{margin:0}
+.vi-date-advisory{background:#efe9ff;color:#2f274b;border-bottom:1px solid #d8cef9;padding:11px 0;font-size:13px;line-height:1.6}
+.vi-date-advisory a{text-decoration:underline;font-weight:700}
+@media(max-width:720px){.tool-panel{grid-template-columns:1fr}.tool-panel>div{padding:22px}.tool-input{flex-wrap:wrap}.tool-input input{max-width:none}.tool-input button{width:100%}}
