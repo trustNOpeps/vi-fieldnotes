@@ -78,6 +78,13 @@ for page in pages:
     if re.match(r"^guides/[^/]+/index.html$", rel):
         check(f"{rel}: sources missing", "Primary sources" in s and ('rockstargames.com' in s or 'playstation.com' in s))
         check(f"{rel}: review date missing", "14 Nov 2026" in s)
+    if rel == "faq/index.html":
+        check("faq: missing accessible empty state", 'id="faq-empty"' in s and 'id="faq-results"' in s)
+    for anchor in re.finditer(r'<a\b[^>]*\btarget="_blank"[^>]*>', s):
+        tag = anchor.group(0)
+        rel_attr = re.search(r'\brel="([^"]*)"', tag)
+        tokens = rel_attr.group(1).split() if rel_attr else []
+        check(f"{rel}: external new-tab link missing safe rel", "noopener" in tokens and "noreferrer" in tokens)
     if rel == "guides/index.html":
         check("guides index: expected 15 cards", p.guide_cards == 15)
     for url in p.links + p.assets:
@@ -99,6 +106,7 @@ except (ET.ParseError, OSError) as e:
     errors.append(f"sitemap invalid: {e}")
 script = (ROOT/"script.js").read_text(encoding="utf-8")
 check("GA4 measurement ID missing", "G-R2X4W14SCX" in script)
+check("consent banner not placed in document flow", "insertAdjacentElement('afterend', banner)" in script)
 check("consent-first analytics absent", "vi-consent" in script and "enableAnalytics()" in script and "analytics-consent" in script)
 check("storage calculator not wired", "vi-storage-check" in script and "vi-storage-result" in script)
 check("source archive missing", (ROOT/"docs"/"launch-playbook.md").is_file())

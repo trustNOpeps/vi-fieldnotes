@@ -45,6 +45,10 @@ SITE_ORIGIN=https://YOUR-ACTUAL-PAGES-DOMAIN.pages.dev python3 scripts/build-for
 
 The build is tested in CI. **Do not literally use** the example URL as an actual project address. Read [hosting migration guide](docs/hosting-migration.md) for Git integration, domain, Search Console and GA4 checks.
 
+## Portfolio-ready project documentation
+
+- [VI Fieldnotes portfolio case study](docs/portfolio-case-study.md) — purpose, visual direction, architecture, tested features and limitations.
+
 ## Operating references
 
 - [Editorial and source-checking playbook](docs/launch-playbook.md)
