@@ -1,3 +1,16 @@
+/* Hide the ChatGPT-added URL attribution parameter from the address bar, not the actual domain.
+   Restrict cleanup to this specific auto-appended value; preserve unrelated URL parameters and all hashes. */
+(function(){
+  try {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('utm_source') === 'chatgpt.com') {
+      url.searchParams.delete('utm_source');
+      const newQuery = url.searchParams.toString();
+      window.history.replaceState(window.history.state, '', url.pathname + (newQuery ? '?' + newQuery : '') + url.hash);
+    }
+  } catch (_) {}
+})();
+
 document.addEventListener('DOMContentLoaded',()=>{const menu=document.querySelector('#menu'),links=document.querySelector('#navlinks');if(menu&&links){menu.addEventListener('click',()=>{let o=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(o));menu.textContent=o?'Close ✕':'Menu ☰'});links.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰'}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&links.classList.contains('open')){links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰';menu.focus()}})}const cards=[...document.querySelectorAll('.guidecard[data-cat]')];const search=document.querySelector('#guide-search');const filters=[...document.querySelectorAll('.filter')];let category='All';function update(){if(!cards.length)return;let q=(search?.value||'').toLowerCase().trim(),shown=0;cards.forEach(c=>{let ok=(category==='All'||c.dataset.cat===category)&&(c.dataset.search||'').includes(q);c.hidden=!ok;if(ok)shown++});const count=document.querySelector('#results');if(count)count.textContent=shown+' guide'+(shown===1?'':'s')+' found';const empty=document.querySelector('#empty');if(empty)empty.hidden=shown>0}search?.addEventListener('input',update);filters.forEach(f=>f.addEventListener('click',()=>{category=f.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===f)));update()}));update();const fsearch=document.querySelector('#faq-search');fsearch?.addEventListener('input',()=>{const q=fsearch.value.toLowerCase();document.querySelectorAll('.faqitem').forEach(x=>x.hidden=!x.textContent.toLowerCase().includes(q))});const checks=[...document.querySelectorAll('.check input')];if(checks.length){const key='vifieldnotes-checklist-v1';let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{}checks.forEach(c=>{c.checked=!!saved[c.id];c.addEventListener('change',()=>{saved[c.id]=c.checked;try{localStorage.setItem(key,JSON.stringify(saved))}catch{}refresh()})});function refresh(){const n=checks.filter(c=>c.checked).length;document.querySelector('#check-progress').textContent=n+' / '+checks.length+' complete';document.querySelector('#check-meter').value=n}refresh();document.querySelector('#reset-checks')?.addEventListener('click',()=>{checks.forEach(c=>{c.checked=false;saved[c.id]=false});try{localStorage.setItem(key,JSON.stringify(saved))}catch{}refresh()})}});
 
 /* Consent-first Google Analytics 4: site visitors can opt in or decline. */

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="850" viewBox="0 0 880 850" role="img" aria-label="Original pastel and neon coastal nightscape">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#201d52"/><stop offset=".29" stop-color="#694780"/><stop offset=".55" stop-color="#d476a3"/><stop offset=".71" stop-color="#ffac89"/><stop offset="1" stop-color="#263554"/></linearGradient>
+<linearGradient id="ocean" x1="0" y1="0" x2="1" y2=".94"><stop stop-color="#2a5675"/><stop offset=".5" stop-color="#17586b"/><stop offset="1" stop-color="#0c213d"/></linearGradient>
+<linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe3a9"/><stop offset=".7" stop-color="#ff9c91"/><stop offset="1" stop-color="#fb6d91"/></linearGradient>
+<linearGradient id="street" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#17284b"/><stop offset="1" stop-color="#17132e"/></linearGradient>
+<linearGradient id="skyglow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffafbc" stop-opacity=".25"/><stop offset="1" stop-color="#51c5e9" stop-opacity="0"/></linearGradient>
+<pattern id="windows" width="28" height="29" patternUnits="userSpaceOnUse"><path d="M9 9h6v11H9z" fill="#ffe2aa" opacity=".45"/><path d="M22 9h3v11h-3z" fill="#6ef4f1" opacity=".25"/></pattern>
+<filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<rect width="880" height="850" fill="url(#sky)"/>
+<path d="M0 120Q180 20 470 135T880 85V0H0Z" fill="#2b235d" opacity=".55"/>
+<path d="M10 276Q260 130 490 268T920 183" fill="none" stroke="#ffb9b9" stroke-opacity=".3" stroke-width="38" filter="url(#blur)"/>
+<g opacity=".3" fill="#fbd1c7"><path d="M80 155q69-29 147-4t110-2q-56 47-121 30-81-17-136-24z"/><path d="M540 198q100-28 193 4t147-7q-81 39-166 19-63-15-174-16z"/></g>
+<circle cx="491" cy="367" r="186" fill="#ffaeac" opacity=".16" filter="url(#blur)"/><circle cx="491" cy="367" r="150" fill="url(#sun)"/>
+<rect y="508" width="880" height="342" fill="url(#ocean)"/>
+<path d="M0 533Q130 504 260 533T570 531T880 528V850H0Z" fill="#205e75" opacity=".7"/>
+<path d="M0 556Q160 538 340 550T880 544" fill="none" stroke="#f5a4a0" stroke-width="5" opacity=".53"/>
+<g opacity=".42" stroke="#ffbaba" stroke-linecap="round"><path d="M380 580h210" stroke-width="6"/><path d="M420 613h155" stroke-width="4"/><path d="M445 644h100" stroke-width="5"/><path d="M473 678h52" stroke-width="4"/></g>
+<!-- distant elevated boulevard and independent art-deco skyline -->
+<path d="M0 502h880v24H0Z" fill="#293c66"/>
+<g fill="#222b57">
+<path d="M55 512V342h91v170z"/><path d="M164 512V258h112v254z"/><path d="M301 512V324h78v188z"/><path d="M395 512V222h115v290z"/><path d="M538 512V299h79v213z"/><path d="M635 512V358h95v154z"/><path d="M743 512V286h110v226z"/>
+</g>
+<path d="M205 258v-32h30v32m225-36v-33h12v33m323 64v-26h11v26" fill="#252c56"/>
+<path d="M55 342h91M164 258h112M395 222h115M743 286h110" stroke="#7a5c98" stroke-width="7" opacity=".5"/>
+<g fill="url(#windows)"><path d="M57 352h89v159H57zM166 270h109v242H166zM303 338h73v174h-73zM398 235h110v277H398zM540 313h76v199h-76zM639 372h88v140h-88zM746 302h106v210H746z"/></g>
+<path d="M164 283h112M164 288h112M744 313h108M744 318h108" stroke="#49f6f4" stroke-width="5" opacity=".75"/>
+<path d="M395 247h115M395 254h115M55 358h91" stroke="#ff8ab8" stroke-width="4" opacity=".8"/>
+<path d="M0 511h880" stroke="#ec88af" stroke-width="9"/>
+<path d="M0 526h880" stroke="#6dfff1" stroke-width="4" opacity=".9"/>
+<g fill="#16233f">
+<path d="M0 850V638l100-30 90 30-5 212z"/><path d="M690 850V629l120-25 70 35v211z"/>
+</g>
+<path d="M0 700Q188 677 376 718T880 694" stroke="#47bdd1" fill="none" stroke-width="12" opacity=".25"/>
+<!-- palms, an original vector drawing -->
+<g stroke="#151c37" stroke-linecap="round" fill="none">
+<path d="M102 850Q93 625 144 418" stroke-width="24"/>
+<path d="M145 423Q104 343 26 376M145 423Q176 324 267 350M145 423Q205 387 286 430M145 423Q75 387 5 454M145 423Q137 340 165 308M145 423Q160 367 217 337" stroke-width="18"/>
+<path d="M800 850Q792 633 745 443" stroke-width="19"/>
+<path d="M748 449Q699 365 610 391M748 449Q776 362 873 369M748 449Q815 399 878 458M748 449Q700 404 640 468M748 449Q748 367 723 332" stroke-width="15"/>
+</g>
+<path d="M0 810Q200 790 450 834T880 800V850H0Z" fill="#0f162e" opacity=".92"/>
+<path d="M0 811Q180 792 350 817" fill="none" stroke="#f98db8" stroke-width="4" opacity=".9"/>
+<path d="M560 830Q730 809 880 815" fill="none" stroke="#56f4e8" stroke-width="4" opacity=".85"/>
+<rect width="880" height="850" fill="url(#skyglow)" opacity=".65"/>
+</svg>
