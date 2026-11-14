@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"><defs><linearGradient id="s" x2="0" y2="1"><stop stop-color="#262548"/><stop offset=".5" stop-color="#9c78a7"/><stop offset="1" stop-color="#edab8c"/></linearGradient></defs><rect width="1200" height="630" fill="url(#s)"/><circle cx="840" cy="320" r="180" fill="#f2c5a3"/><path d="M0 470h70V300h110v110h80V240h170v210h100V320h160v150h90V270h155v200h130V365h135v265H0Z" fill="#1a2540"/><text x="76" y="143" font-size="90" font-family="Arial,sans-serif" font-weight="bold" fill="#fff">VI/ FIELDNOTES</text><text x="80" y="211" font-size="27" font-family="Arial,sans-serif" fill="#eee">The facts before the hype. Independent GTA VI guide.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#151630"/><stop offset=".48" stop-color="#4d366b"/><stop offset=".77" stop-color="#d16a99"/><stop offset="1" stop-color="#ffac8d"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/><circle cx="906" cy="362" r="201" fill="#ffa88d"/><circle cx="906" cy="362" r="170" fill="#ffd2a6" opacity=".65"/>
+<path d="M0 486h100v-80h90V311h120v165h100V389h108v87h40V323h118v153h61V280h110v196h78V355h112v121h63v154H0Z" fill="#17213d"/>
+<path d="M0 483h1200" stroke="#67e7e6" stroke-width="9"/><path d="M0 515h1200v115H0Z" fill="#15263e" opacity=".87"/>
+<path d="M0 566h1200" stroke="#fa8fa6" stroke-width="3" opacity=".6"/>
+<g fill="#fff"><text x="72" y="157" font-family="Arial,sans-serif" font-weight="900" font-size="86" letter-spacing="-5">VI<tspan fill="#ffa5bd">/</tspan> FIELDNOTES</text><text x="75" y="211" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="7">INDEPENDENT GTA VI GUIDE</text><text x="78" y="286" font-family="Arial,sans-serif" font-size="34" font-weight="600">Facts first. Hype later.</text></g>
+<path d="M77 334h250" stroke="#6deee3" stroke-width="9"/>
+<text x="77" y="587" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#ffd2b5">UNOFFICIAL / VERIFIED SOURCES / LEONIDA AESTHETIC</text>
+</svg>
