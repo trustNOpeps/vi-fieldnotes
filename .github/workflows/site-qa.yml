@@ -20,3 +20,7 @@ jobs:
         run: python3 tests/check_site.py
       - name: Validate JavaScript syntax
         run: node --check script.js
+      - name: Validate root-domain build output
+        run: |
+          SITE_ORIGIN=https://example.pages.dev python3 scripts/build-for-root.py
+          python3 -c "from pathlib import Path; p=Path('dist/index.html').read_text(); assert '/vi-fieldnotes/' not in p and 'https://example.pages.dev/' in p; assert Path('dist/tools/index.html').is_file(); assert 'https://example.pages.dev/tools/' in Path('dist/sitemap.xml').read_text()"
