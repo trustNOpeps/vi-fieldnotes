@@ -95,3 +95,50 @@ document.addEventListener('DOMContentLoaded', function(){
     const main=document.querySelector('main'); if(main)main.insertAdjacentElement('afterbegin',notice);
   }
 });
+
+
+/* Anonymous, consent-gated interaction signals. No identifiers, search strings or
+   user-entered calculator values are sent to GA4. Revenue is NEVER inferred. */
+document.addEventListener('DOMContentLoaded', function () {
+  const collect = function (eventName, values) {
+    if (window.__viAnalyticsEnabled === true && typeof window.gtag === 'function') {
+      window.gtag('event', eventName, values);
+    }
+  };
+  const internalBase = '/vi-fieldnotes/';
+  const officialDomains = new Set(['rockstargames.com', 'www.rockstargames.com', 'support.rockstargames.com', 'playstation.com', 'www.playstation.com']);
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    let target;
+    try { target = new URL(link.href, location.href); } catch (_) { return; }
+    if (target.origin === location.origin && target.pathname.startsWith(internalBase)) {
+      if (link.classList.contains('guidecard')) {
+        collect('select_content', { content_type: 'guide', item_id: target.pathname.slice(internalBase.length).slice(0,80) });
+      } else if (target.pathname === internalBase+'tools/') {
+        collect('vi_tool_open', { tool_name: 'storage_headroom' });
+      } else if (target.pathname === internalBase+'launch-day/') {
+        collect('vi_checklist_open', { checklist_name: 'launch_readiness' });
+      }
+    } else if (officialDomains.has(target.hostname)) {
+      collect('vi_primary_source_open', { source_host: target.hostname });
+    }
+    // Future approved affiliate links must explicitly have data-affiliate="true".
+    // No such live links exist yet; a click will never be mistaken for a sale.
+    if (link.dataset.affiliate === 'true') {
+      collect('vi_affiliate_outbound', { placement: link.dataset.placement || 'unspecified' });
+    }
+  });
+  document.getElementById('vi-storage-check')?.addEventListener('click', function () {
+    const el = document.getElementById('vi-storage-value');
+    const value = Number(el?.value);
+    const valid = el && el.value.trim() !== '' && Number.isFinite(value) && value >= 0 && value <= 100000;
+    collect('vi_storage_calculation', { outcome: valid ? (value >= 212 ? 'meets_guidance' : 'below_guidance') : 'invalid_input' });
+  });
+  document.querySelectorAll('.check input[type=checkbox]').forEach(function (box) {
+    box.addEventListener('change', function () {
+      const completed = document.querySelectorAll('.check input[type=checkbox]:checked').length;
+      collect('vi_checklist_updated', { completed_steps: completed });
+    });
+  });
+});
