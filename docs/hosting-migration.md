@@ -1,14 +1,16 @@
 # Moving VI Fieldnotes to business-appropriate hosting
-Last reviewed 14 November 2026. The existing editorial GitHub Pages site remains live. No external hosting account, custom domain or paid subscription has been created through this project.
+Updated 15 November 2026. Primary website: https://vi-fieldnotes.pages.dev/ (Cloudflare Pages, address supplied by the owner). The GitHub Pages preview remains a separate deployment. No custom domain or paid subscription is claimed.
+
+Root build settings: `main` branch, command `python3 scripts/build-for-root.py`, output `dist`, and `SITE_ORIGIN=https://vi-fieldnotes.pages.dev`. These are the reproducible repository build settings; account-side settings, Search Console and GA4 still require separate verification.
 
 ## Why this matters
 GitHub Pages is intended to showcase personal or organizational projects, not to run a site primarily directed at commercial transactions. See https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits .
 Google AdSense requires a site URL without a path, and generally doesn't accept arbitrary subdomains as new sites (except eligible host partners). See https://support.google.com/adsense/answer/2784438?hl=en . The current GitHub Pages project lives under `/vi-fieldnotes/`. **Do not assume AdSense will approve it.** Commercial rollout should use hosting and an origin under the publisher's control and applicable platform terms.
 
-## Recommended low-cost future path
-Keep GitHub as the source repository, move production hosting to a dedicated Cloudflare Pages site using Git integration, and optionally connect a custom domain only once traffic or commercial eligibility justifies it. Cloudflare Pages documents GitHub builds and a free tier with build limits; these are not guaranteed indefinitely. Source: https://developers.cloudflare.com/pages/configuration/git-integration/ and https://developers.cloudflare.com/pages/platform/limits/ .
+## Hosting architecture
+Keep GitHub as the source repository, use Cloudflare Pages for the primary website, and optionally connect a custom domain only once traffic or commercial eligibility justifies it. Cloudflare Pages documents GitHub builds and a free tier with build limits; these are not guaranteed indefinitely. Source: https://developers.cloudflare.com/pages/configuration/git-integration/ and https://developers.cloudflare.com/pages/platform/limits/ .
 
-### One-time owner actions (cannot be automated without Cloudflare authorization)
+### Recreating or checking the Cloudflare deployment
 1. Sign in to Cloudflare Dashboard with your own account; open Workers & Pages → Create → Pages → Import an existing Git repository. Grant access to **trustNOpeps/vi-fieldnotes** only, if available.
 2. Create a Pages project (for example `vi-fieldnotes`) and confirm its final assigned `*.pages.dev` URL; do not guess whether the name is available.
 3. Build command: `python3 scripts/build-for-root.py`.
@@ -33,6 +35,6 @@ Keep GitHub as the source repository, move production hosting to a dedicated Clo
 ## Local build smoke test
 Run:
 ```bash
-SITE_ORIGIN=https://your-actual-site.pages.dev python3 scripts/build-for-root.py
+SITE_ORIGIN=https://vi-fieldnotes.pages.dev python3 scripts/build-for-root.py
 ```
 Upload the generated `dist/` only after using a real origin. CI tests with a placeholder domain purely to validate generated links; this does not publish anything.

@@ -1,8 +1,9 @@
 # VI Fieldnotes / independent GTA VI launch guides
 
-**Live editorial preview:** https://trustnopeps.github.io/vi-fieldnotes/  
-**Source branch:** `main`  
-**Research baseline:** 14 November 2026 (pre-release).  
+**Primary website (Cloudflare Pages):** https://vi-fieldnotes.pages.dev/
+**GitHub Pages preview:** https://trustnopeps.github.io/vi-fieldnotes/
+**Source branch:** `main`
+**Research baseline:** 14 November 2026 (pre-release).
 **Scheduled publisher launch:** 19 November 2026, PS5 and Xbox Series X|S — verify directly with [Rockstar Games](https://www.rockstargames.com/VI).
 
 VI Fieldnotes is an **independent, unofficial, accessible editorial website**, not affiliated with Rockstar Games, Take-Two Interactive, PlayStation or Xbox. It is a small source-grounded publication/learning experiment; no guaranteed traffic, income or affiliated business relationship is claimed.
@@ -14,7 +15,7 @@ VI Fieldnotes is an **independent, unofficial, accessible editorial website**, n
 - Free browser-only PS5 storage calculator comparing user-entered GB to PlayStation Indonesia's published 212 GB preparation advisory.
 - Ten-step launch checklist saved locally in the reader's browser.
 - Custom visual identity using original abstract art, semantic accessible markup, responsive layout, canonical metadata and 23-route sitemap.
-- Optional Google Analytics 4 integration `G-R2X4W14SCX`; consent-first, visitor may decline. Review [privacy/editorial notes](https://trustnopeps.github.io/vi-fieldnotes/about/). Google Search Console is verified by the website owner.
+- Optional Google Analytics 4 integration `G-R2X4W14SCX`; consent-first, visitor may decline. Review [privacy/editorial notes](https://vi-fieldnotes.pages.dev/about/). The owner previously verified Google Search Console for the GitHub Pages site; verification of the Cloudflare property is a separate step.
 - GitHub Actions static QA checks HTML, links, metadata, sitemap, article sources and JavaScript syntax.
 
 ## Running and testing
@@ -30,20 +31,20 @@ node --check script.js
 
 Local preview needs the repository served at the `/vi-fieldnotes/` path to match GitHub Pages routing. You may use a simple static server with a parent directory containing the repo under that name, or use GitHub Pages for the exact live structure.
 
-**Production GitHub Pages:** deploy from `main`, folder `/(root)`. The `.nojekyll` file keeps the static site assets unchanged. Workflow: [Actions](https://github.com/trustNOpeps/vi-fieldnotes/actions).
+**GitHub Pages preview:** deploy from `main`, folder `/(root)`. The `.nojekyll` file keeps the static site assets unchanged. Workflow: [Actions](https://github.com/trustNOpeps/vi-fieldnotes/actions).
 
-## Optional hosting migration for commercialization
+## Cloudflare Pages hosting
 
 GitHub Pages is excellent for an independent editorial project, but [GitHub's own policy](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) does not allow it to serve as the primary hosting for a website principally facilitating commercial transactions. Google's AdSense site registration [does not accept directory paths](https://support.google.com/adsense/answer/2784438?hl=en) such as `/vi-fieldnotes/`. **Do not assume the current Pages address qualifies for AdSense or a merchant program.**
 
-A safe optional root-domain build is prepared for a future compliant hosting account:
+The primary portfolio destination is the Cloudflare Pages URL supplied by the owner. Build its root-path version with:
 
 ```bash
-SITE_ORIGIN=https://YOUR-ACTUAL-PAGES-DOMAIN.pages.dev python3 scripts/build-for-root.py
-# upload /dist after reviewing canonical, sitemap and links
+SITE_ORIGIN=https://vi-fieldnotes.pages.dev python3 scripts/build-for-root.py
+# Output directory: dist
 ```
 
-The build is tested in CI. **Do not literally use** the example URL as an actual project address. Read [hosting migration guide](docs/hosting-migration.md) for Git integration, domain, Search Console and GA4 checks.
+The build is tested in CI. Source HTML retains the GitHub Pages path; the build rewrites paths and metadata for Cloudflare. A Cloudflare deployment does not imply advertising or affiliate approval. Read [hosting migration guide](docs/hosting-migration.md) for Git integration, domain, Search Console and GA4 checks.
 
 ## Portfolio-ready project documentation
 
