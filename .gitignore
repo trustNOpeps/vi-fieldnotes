@@ -1,3 +1,6 @@
 /dist/
 __pycache__/
 *.py[cod]
+/studio_output/
+/outputs/
+/studio/render_assets/
