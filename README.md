@@ -70,3 +70,7 @@ Following the scheduled launch, guides need a manual, factual re-review. The web
 ## License and affiliation
 
 The original VI Fieldnotes layouts, writing and abstract graphics were prepared for this independent project. Product trademarks remain with their respective owners. Third-party content and official source pages are linked, not copied into this repository.
+
+## Automated editorial studio (draft-only MVP)
+
+[VI Fieldnotes Editorial Studio](studio/README.md) provides a seven-day editorial queue (16–22 Nov 2026), a primary-source and rights gate, English narration scripts, five-scene neon-coast storyboards, subtitles, captions, and watermarked MP4 previews. A [daily GitHub Actions draft job](.github/workflows/editorial-studio.yml) generates an **internal review artifact** at 08:17 WITA; it never publishes anything to social accounts. An editorial review and a licensed, natural voice track are required before any video is considered publication-ready. Expired stories and an empty queue fail closed rather than repeating or inventing news. This tool is not included in the Cloudflare Pages output.

@@ -1,0 +1,54 @@
+name: VI Fieldnotes editorial studio (draft only)
+on:
+  schedule:
+    # 00:17 UTC = 08:17 Asia/Makassar. Scheduled GitHub jobs may be delayed.
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+    inputs:
+      story:
+        description: 'Story id or auto (calendar-based)'
+        default: auto
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: editorial-studio
+  cancel-in-progress: false
+jobs:
+  daily-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install FFmpeg and FFprobe
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Install free renderer dependency
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Run tests
+        run: python -m unittest discover -s tests -p 'test_studio.py' -v
+      - name: Discover official sources (leads only, no claims)
+        run: python studio/pipeline.py discover --output studio_output
+      - name: Build source-backed draft for today's slot
+        env:
+          STORY_ID: ${{ github.event.inputs.story || 'auto' }}
+        run: python studio/pipeline.py build --story "$STORY_ID" --output studio_output
+      - name: Render internal preview (never publish-ready)
+        run: |
+          if test -f studio_output/manifest.json; then
+            python studio/render.py --input studio_output --mode preview --width 540 --height 960
+          else
+            echo 'No safe scheduled draft today; preview deliberately skipped.'
+          fi
+      - name: Upload private-to-workflow review bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: vi-fieldnotes-internal-draft-${{ github.run_number }}
+          path: studio_output/
+          if-no-files-found: error
+          retention-days: 14

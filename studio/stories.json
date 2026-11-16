@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "stories": [
+    {
+      "id": "xbox-one-cloud-2026",
+      "title": "GTA VI on Xbox One? Here's the catch",
+      "hook": "GTA VI ON XBOX ONE?",
+      "priority": 10,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-11-19",
+      "audience": "global",
+      "landing_path": "guides/platforms/",
+      "source_urls": [
+        "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/"
+      ],
+      "claims": [
+        "Xbox Wire confirms day-one Xbox One access through Xbox Cloud Gaming.",
+        "Xbox One does not have a native GTA VI release; Xbox Series X|S are native console releases.",
+        "Cloud access depends on market and eligibility; GTA VI is purchased separately."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "XBOX ONE?",
+          "subtitle": "Yes, but read the fine print.",
+          "voice": "GTA VI on Xbox One? Yes. But there's one major catch.",
+          "seconds": 6
+        },
+        {
+          "title": "CLOUD ONLY",
+          "subtitle": "Not a native Xbox One version.",
+          "voice": "Xbox has confirmed cloud streaming. The game runs remotely, not on your Xbox One hardware.",
+          "seconds": 9
+        },
+        {
+          "title": "TWO DIFFERENT THINGS",
+          "subtitle": "Series X|S: native. Xbox One: cloud.",
+          "voice": "Xbox Series X and S get the native version. Xbox One players stream it instead.",
+          "seconds": 9
+        },
+        {
+          "title": "CHECK ACCESS",
+          "subtitle": "Region, eligibility, connection, purchase.",
+          "voice": "Cloud availability varies by market. You'll also need to buy the game separately.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "Source-backed at VI Fieldnotes.",
+          "voice": "See the official Xbox announcement and more sourced guides at VI Fieldnotes.",
+          "seconds": 7
+        }
+      ],
+      "scheduled_for": "2026-11-16"
+    },
+    {
+      "id": "launch-platforms-2026",
+      "title": "Where is GTA VI officially launching?",
+      "hook": "WHERE IS GTA VI LAUNCHING?",
+      "priority": 7,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-11-19",
+      "audience": "global",
+      "landing_path": "platforms/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "Rockstar currently lists PlayStation 5 and Xbox Series X|S for November 19, 2026.",
+        "An unannounced platform launch date should not be represented as confirmed."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "CONSOLE CHECK",
+          "subtitle": "Stop guessing the platform list.",
+          "voice": "Which platforms are actually confirmed for GTA VI? Here's the official list.",
+          "seconds": 6
+        },
+        {
+          "title": "PLAYSTATION 5",
+          "subtitle": "Confirmed for launch.",
+          "voice": "Rockstar officially lists PlayStation Five for launch.",
+          "seconds": 7
+        },
+        {
+          "title": "XBOX SERIES X|S",
+          "subtitle": "Also confirmed for launch.",
+          "voice": "Xbox Series X and Series S are also confirmed.",
+          "seconds": 7
+        },
+        {
+          "title": "CHECK THE SOURCE",
+          "subtitle": "Rumor dates are not announcements.",
+          "voice": "Don't treat a viral platform date as official unless the publisher confirms it.",
+          "seconds": 9
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "Source-linked at VI Fieldnotes.",
+          "voice": "Read the source-backed platform guide at VI Fieldnotes.",
+          "seconds": 7
+        }
+      ],
+      "scheduled_for": "2026-11-17"
+    },
+    {
+      "id": "preload-vs-play-2026",
+      "title": "Pre-load does not mean playable",
+      "hook": "DOWNLOADED? NOT UNLOCKED.",
+      "priority": 6,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-11-19",
+      "audience": "global",
+      "landing_path": "guides/pre-load/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "The publisher advertises pre-loading prior to the scheduled release.",
+        "Pre-loading content before release does not inherently grant early access."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "PRE-LOAD ≠ PLAY",
+          "subtitle": "Two different moments.",
+          "voice": "Already pre-loaded GTA VI? That does not mean you can play it early.",
+          "seconds": 7
+        },
+        {
+          "title": "PRE-LOAD",
+          "subtitle": "Download the files ahead of time.",
+          "voice": "Pre-loading downloads game files before launch so you're better prepared.",
+          "seconds": 8
+        },
+        {
+          "title": "GAME UNLOCK",
+          "subtitle": "Wait for the official release window.",
+          "voice": "The release time determines when your game actually unlocks.",
+          "seconds": 8
+        },
+        {
+          "title": "VERIFY THE CLOCK",
+          "subtitle": "Check publisher and storefront details.",
+          "voice": "Always check the official publisher and the relevant storefront for your timing.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "Check the launch guide.",
+          "voice": "Get the clear launch guide at VI Fieldnotes.",
+          "seconds": 6
+        }
+      ],
+      "scheduled_for": "2026-11-18"
+    },
+    {
+      "id": "intro-evergreen",
+      "title": "How to check GTA VI rumors",
+      "hook": "VIRAL DOES NOT MEAN VERIFIED",
+      "priority": 1,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2027-11-16",
+      "audience": "global",
+      "landing_path": "guides/rumor-vs-official/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "Publisher and platform support pages are better primary references for game availability than unattributed viral screenshots."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "VIRAL ≠ VERIFIED",
+          "subtitle": "See a GTA VI leak? Check this.",
+          "voice": "A viral GTA VI screenshot is not proof. Check where the claim came from.",
+          "seconds": 7
+        },
+        {
+          "title": "CHECK THE PUBLISHER",
+          "subtitle": "Start at the official game page.",
+          "voice": "First, look for the announcement on Rockstar's official site.",
+          "seconds": 8
+        },
+        {
+          "title": "CHECK THE PLATFORM",
+          "subtitle": "Look for first-party support too.",
+          "voice": "Next, cross-check availability or purchase details with the console platform.",
+          "seconds": 8
+        },
+        {
+          "title": "CHECK THE DATE",
+          "subtitle": "Old posts can look new.",
+          "voice": "Then check when it was published, and whether the information has changed.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "Independent sources at VI Fieldnotes.",
+          "voice": "Want source-linked guides instead of rumor threads? Try VI Fieldnotes.",
+          "seconds": 7
+        }
+      ],
+      "scheduled_for": "2026-11-20"
+    },
+    {
+      "id": "safe-buying-checklist",
+      "scheduled_for": "2026-11-19",
+      "title": "Three checks before buying GTA VI",
+      "hook": "DON’T BUY BEFORE THIS",
+      "priority": 3,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-12-01",
+      "audience": "global",
+      "landing_path": "guides/safe-buying-and-spoilers/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "Always verify that a game listing is on an official store or trusted authorized retailer.",
+        "Check platform compatibility, edition contents, and storefront region before payment."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "BEFORE YOU BUY",
+          "subtitle": "Three checks in thirty seconds.",
+          "voice": "Before buying GTA VI, check three details so you know what you are paying for.",
+          "seconds": 7
+        },
+        {
+          "title": "CHECK THE SELLER",
+          "subtitle": "Official store or trusted retailer.",
+          "voice": "First, use an official store or a seller you can verify.",
+          "seconds": 7
+        },
+        {
+          "title": "CHECK THE PLATFORM",
+          "subtitle": "Match the system you actually own.",
+          "voice": "Second, confirm the product supports your console and account setup.",
+          "seconds": 8
+        },
+        {
+          "title": "CHECK THE EDITION",
+          "subtitle": "Understand what is included.",
+          "voice": "Third, compare the edition contents and any region restrictions before paying.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "The buying guide is free.",
+          "voice": "Find the free source-linked buying checklist at VI Fieldnotes.",
+          "seconds": 7
+        }
+      ]
+    },
+    {
+      "id": "safe-spoiler-habits",
+      "scheduled_for": "2026-11-21",
+      "title": "Avoid fake GTA VI spoiler bait",
+      "hook": "SPOILER? OR CLICKBAIT?",
+      "priority": 2,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-12-15",
+      "audience": "global",
+      "landing_path": "guides/safe-buying-and-spoilers/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "Unverified screenshots and unofficial links are not primary evidence.",
+        "Use source-aware browsing and privacy settings to reduce exposure to unverified spoilers."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "SPOILER BAIT?",
+          "subtitle": "Do not reward fake leaks.",
+          "voice": "That shocking GTA VI image could be real, edited, or completely fabricated.",
+          "seconds": 7
+        },
+        {
+          "title": "CHECK THE ORIGIN",
+          "subtitle": "Trace the original upload.",
+          "voice": "Look for the original source instead of trusting a reposted screenshot.",
+          "seconds": 8
+        },
+        {
+          "title": "SKIP RANDOM LINKS",
+          "subtitle": "Beware of fake access pages.",
+          "voice": "Never give your login to an unverified early access or unlock website.",
+          "seconds": 8
+        },
+        {
+          "title": "USE YOUR FILTERS",
+          "subtitle": "Mute keywords when needed.",
+          "voice": "Mute spoiler keywords and avoid accounts posting material without a traceable source.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "VI Fieldnotes source guides.",
+          "voice": "Find source-aware gaming guides at VI Fieldnotes.",
+          "seconds": 7
+        }
+      ]
+    },
+    {
+      "id": "source-check-three-steps",
+      "scheduled_for": "2026-11-22",
+      "title": "Three steps to verify a GTA VI claim",
+      "hook": "THIS CLAIM NEEDS A SOURCE",
+      "priority": 2,
+      "reviewed_on": "2026-11-16",
+      "review_by": "2026-12-15",
+      "audience": "global",
+      "landing_path": "guides/rumor-vs-official/",
+      "source_urls": [
+        "https://www.rockstargames.com/VI"
+      ],
+      "claims": [
+        "Primary announcements are stronger evidence than unattributed social screenshots.",
+        "Publication date and platform context matter when assessing time-sensitive gaming claims."
+      ],
+      "rights": {
+        "visuals": "self_created",
+        "audio": "not_attached",
+        "footage": "none"
+      },
+      "beats": [
+        {
+          "title": "CHECK THE CLAIM",
+          "subtitle": "Do not confuse hype with evidence.",
+          "voice": "Before sharing that GTA VI claim, run a quick three step source check.",
+          "seconds": 7
+        },
+        {
+          "title": "WHO SAID IT?",
+          "subtitle": "Look for a first-party link.",
+          "voice": "First, find the original statement from the publisher or platform.",
+          "seconds": 8
+        },
+        {
+          "title": "WHEN WAS IT?",
+          "subtitle": "Check the publication date.",
+          "voice": "Second, check the date. Old launch reports can circulate as fresh news.",
+          "seconds": 8
+        },
+        {
+          "title": "WHAT IS MISSING?",
+          "subtitle": "Mind region and platform details.",
+          "voice": "Third, verify which edition, device, or region the claim actually covers.",
+          "seconds": 8
+        },
+        {
+          "title": "FACTS BEFORE HYPE",
+          "subtitle": "Independent source-linked guide.",
+          "voice": "Follow VI Fieldnotes for facts you can trace.",
+          "seconds": 7
+        }
+      ]
+    }
+  ]
+}
