@@ -1,0 +1,43 @@
+{
+  "project": "VI Fieldnotes",
+  "site": "https://vi-fieldnotes.pages.dev/",
+  "language": "en-US",
+  "timezone": "Asia/Makassar",
+  "daily_target": 1,
+  "max_daily_usd": 0,
+  "publishing": {
+    "enabled": false,
+    "first_run_publish": false,
+    "require_human_approval": true
+  },
+  "quality": {
+    "min_seconds": 16,
+    "max_seconds": 55,
+    "max_words_per_beat": 42,
+    "max_narration_words": 145,
+    "require_primary_source": true,
+    "require_usage_rights": true,
+    "require_natural_voice_for_release": true,
+    "critic_rounds": 2
+  },
+  "brand": {
+    "palette": {
+      "night": "#10152E",
+      "indigo": "#20234B",
+      "cyan": "#38E8E1",
+      "pink": "#F451A5",
+      "coral": "#FF8D7A",
+      "cream": "#F8F4EE"
+    },
+    "tone": "Fast, factual, cinematic gaming editorial",
+    "tagline": "Facts before hype",
+    "copyright_policy": "Self-created art only, unless usage-rights evidence is attached"
+  },
+  "allowed_source_hosts": [
+    "www.rockstargames.com",
+    "support.rockstargames.com",
+    "news.xbox.com",
+    "www.playstation.com",
+    "support.xbox.com"
+  ]
+}
